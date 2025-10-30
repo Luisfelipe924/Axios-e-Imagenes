@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  height: 100vh;
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  transition: background 1s ease;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.app-container {      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.00);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px  35px rgba(0, 0, 0, 0.3.5);
+  text-align:  center;
+  color: #fff;
+  width: 500px;
+  transition: trasnform 0.3s ease, box shadow 0.3s ease;
+}
+
+.card.hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+}
+
+.random-imagen-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-box {
+  width: 480px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.random-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fetch.button {
+  padding: 0.8rem 1.6rem;
+  background: #e94560; 
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fetch.button:hover{
+  background: #ff5c8d;
+  transform: scale(1.08);
+}
+
+.loader {
+  color: #ddd;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #ff5c8d;
+}
